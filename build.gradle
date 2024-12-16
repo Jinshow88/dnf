@@ -24,17 +24,60 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.4'
+// Lombok: 자바의 보일러플레이트 코드를 줄여주는 라이브러리
     compileOnly 'org.projectlombok:lombok'
+
+// Spring Boot DevTools: 개발 중 핫스왑, 자동 리스타트 등 개발 편의 기능을 제공
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+// MariaDB JDBC 클라이언트: MariaDB와의 연결을 위한 JDBC 드라이버
     runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+
+// Spring Boot Configuration Processor: Spring Boot 설정 파일에 대한 메타데이터 생성
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+// Lombok의 애노테이션 프로세서: 컴파일 시 Lombok의 애노테이션을 처리하기 위한 의존성
     annotationProcessor 'org.projectlombok:lombok'
+
+// Spring Boot Starter Test: Spring Boot 애플리케이션을 위한 테스트 환경 설정
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+// MyBatis Spring Boot Starter Test: MyBatis를 사용하는 Spring Boot 애플리케이션 테스트용
     testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.4'
+
+// MyBatis Spring Boot Starter Test (버전 3.0.3): MyBatis Spring Boot 테스트 환경 설정 (중복됨, 삭제 가능)
+    testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.3'
+
+// JUnit Platform Launcher: JUnit 5 플랫폼을 위한 런처 라이브러리
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+// Spring Boot Starter JDBC: JDBC를 활용한 데이터베이스 연동을 위한 기본적인 의존성
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+
+// Spring Boot Starter Web: RESTful API 및 웹 애플리케이션을 위한 의존성
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+// MyBatis Spring Boot Starter: MyBatis를 Spring Boot에서 사용할 수 있도록 설정하는 의존성
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.4'
+
+// BCrypt: 비밀번호 해싱을 위한 라이브러리
+    implementation 'org.mindrot:jbcrypt:0.4'
+
+// Log4jdbc: SQL 쿼리를 로깅하기 위한 라이브러리
+    implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
+
+// SpringDoc OpenAPI: Spring 기반의 REST API에 OpenAPI 문서를 자동으로 생성하는 라이브러리
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
+
+// Spring Boot Starter Actuator: 애플리케이션의 상태 모니터링 및 관리 기능을 제공
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+// Spring Boot Starter Data JPA: JPA를 사용한 데이터베이스 연동을 위한 기본적인 의존성
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+// Spring Boot Starter WebFlux: 리액티브 웹 애플리케이션을 위한 의존성 (버전 3.3.0)
+    implementation 'org.springframework.boot:spring-boot-starter-webflux:3.3.0'
+
 }
 
 tasks.named('test') {

@@ -1,0 +1,60 @@
+spring:
+  config:
+    #optional: .env 파일이 없어도 컴파일 에러가 발생 X
+    #file: 파일을 import하겠다
+    #.env: 파일명
+    import: optional:file:.env
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mariadb://localhost:3306/dnf
+    username: root
+    password: wlsgus21^^
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: false
+    default-property-inclusion: non_null
+  # create: 기존테이블 삭제 후 다시 생성 (DROP + CREATE)
+  # create-drop: create와 같으나 종료시점에 테이블 DROP
+  # update: 변경분만 반영(운영DB에서는 사용하면 안됨)
+  # validate: 엔티티와 테이블이 정상 매핑되었는지만 확인
+  # none: 사용하지 않음(사실상 없는 값이지만 관례상 none이라고 한다.)
+
+  jpa:
+    hibernate:
+      ddl-auto: update #entity(테이블)를 서버 기동 때 마다 새롭게 만든다 update
+    show-sql: true # JPA 가 만든 쿼리문 로그에 출력
+    properties:
+      hibernate:
+        format_sql: true #로그 찍을 때 보기 편하게 포맷딩해서 출력
+
+
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 30MB
+
+mybatis:
+  mapper-locations: mappers/**/*.xml
+
+open:
+  key: Q08kMP1vfysTkL6kPjK4W5Z8ZQtKMI3K
+
+springdoc:
+  api-docs:
+    version: openapi_3_1
+  swagger-ui:
+    path: /swagger
+    operations-sorter: method
+    default-model-expand-depth: 10
+    default-models-expand-depth: 10
+    display-request-duration: true
+  cache:
+    disabled: true
+
+file:
+  directory: C:\Users\HOME\Desktop\dnf
+api:
+  url: https://api.neople.co.kr/df/servers
+
+
+---
