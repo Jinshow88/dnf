@@ -10,6 +10,8 @@ import com.game.dnf.dto.response.*;
 import com.game.dnf.entity.BasicInfo;
 import com.game.dnf.entity.Search;
 import com.game.dnf.entity.Server;
+import com.game.dnf.exception.CustomException;
+import com.game.dnf.exception.UserErrorCode;
 import com.game.dnf.repository.BasicInfoRepository;
 import com.game.dnf.repository.SearchRepository;
 import com.game.dnf.repository.ServerIdRepository;
@@ -120,22 +122,28 @@ public class OpenDataServerIdServiceImpl implements OpenDataServerIdService {
             }
 
             log.info("데이터가 성공적으로 저장되었습니다.");
-        } catch (Exception e) {
-            log.error("데이터 저장 중 오류 발생", e);
-        }
-        SearchResult result = new SearchResult();
-        result.setServerId(result.getServerId());
-        result.setCharacterId(result.getCharacterId());
-        result.setLevel(result.getLevel());
-        result.setJobId(result.getJobId());
-        result.setJobGrowId(result.getJobGrowId());
-        result.setJobName(result.getJobName());
-        result.setJobGrowName(result.getJobGrowName());
-        result.setFame(result.getFame());
-        // 서버 ID에 맞는 응답 생성 로직을 추가해야 함
-        // 지금은 임시로 null 리턴
 
-        return SearchResponseDto.success(result);
+            SearchResult result = new SearchResult();
+            result.setServerId(result.getServerId());
+            result.setCharacterId(result.getCharacterId());
+            result.setLevel(result.getLevel());
+            result.setJobId(result.getJobId());
+            result.setJobGrowId(result.getJobGrowId());
+            result.setJobName(result.getJobName());
+            result.setJobGrowName(result.getJobGrowName());
+            result.setFame(result.getFame());
+            // 서버 ID에 맞는 응답 생성 로직을 추가해야 함
+            // 지금은 임시로 null 리턴
+
+            return SearchResponseDto.success(result);
+
+        } catch (CustomException e) {
+            throw new CustomException(e.getErrorCode());
+        } catch (Exception e){
+            e.printStackTrace();
+            log.error("중복 데이터 입니다.", e);
+            throw new CustomException(UserErrorCode.DB);
+        }
     }
 
     //기본정보
