@@ -1,4 +1,4 @@
-package com.game.dnf.dto.request.opendata;
+package com.game.dnf.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;

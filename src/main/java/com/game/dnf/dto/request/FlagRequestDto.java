@@ -1,4 +1,4 @@
-package com.game.dnf.dto.request.opendata;
+package com.game.dnf.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ServerIdRequestDto {
-      @JsonIgnore  String apikey;
-
+public class FlagRequestDto {
+    @JsonIgnore
+    String apikey;
 }

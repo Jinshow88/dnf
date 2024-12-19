@@ -1,6 +1,6 @@
-package com.game.dnf.controller.opendata;
+package com.game.dnf.controller;
 
-import com.game.dnf.dto.request.opendata.*;
+import com.game.dnf.dto.request.*;
 import com.game.dnf.dto.response.*;
 import com.game.dnf.service.EquipService;
 import io.swagger.v3.oas.annotations.Operation;

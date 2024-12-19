@@ -1,7 +1,7 @@
 package com.game.dnf.service;
 
 
-import com.game.dnf.dto.request.opendata.*;
+import com.game.dnf.dto.request.*;
 import com.game.dnf.dto.response.*;
 import org.springframework.http.ResponseEntity;
 
