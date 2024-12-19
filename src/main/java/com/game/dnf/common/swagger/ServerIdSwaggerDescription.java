@@ -1,4 +1,4 @@
-package com.game.dnf.common.swagger.opendata;
+package com.game.dnf.common.swagger;
 
 public class ServerIdSwaggerDescription {
 

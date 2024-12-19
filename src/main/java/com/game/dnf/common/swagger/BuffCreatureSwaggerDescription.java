@@ -1,8 +1,8 @@
-package com.game.dnf.common.swagger.opendata;
+package com.game.dnf.common.swagger;
 
-public class StatusSwaggerDescription {
+public class BuffCreatureSwaggerDescription {
 
-    public static final String STATUS_DESCRIPTION =
+    public static final String BUFF_AVATAR_DESCRIPTION =
 
             "<strong>서버 내역을 불러옵니다.</strong>" +
                     "<p>로그인이 필요한 기능입니다. 상단 Authorize 에 토큰값을 입력 후 이용해주세요.</p>" +
@@ -12,7 +12,7 @@ public class StatusSwaggerDescription {
                     "<p>03. reservationCancelResultSetList : 예약취소한 글램핑 리스트를 불러옵니다.</p>"
             ;
 
-    public static final String STATUS_RESPONSE_ERROR_CODE =
+    public static final String BUFF_AVATAR_RESPONSE_ERROR_CODE =
 
             "<strong>발생 가능한 에러코드</strong>" +
                     "<p>CU - 미 로그인 (400)</p>" +
