@@ -2,7 +2,7 @@ package com.game.dnf.controller.opendata;
 
 import com.game.dnf.dto.request.opendata.*;
 import com.game.dnf.dto.response.*;
-import com.game.dnf.service.OpenDataServerIdService;
+import com.game.dnf.service.EquipService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -45,7 +45,7 @@ import static com.game.dnf.common.swagger.opendata.TalismanSwaggerDescription.TA
 @RequiredArgsConstructor
 @Tag(name = "장비")
 public class EquipController {
-    private final OpenDataServerIdService service;
+    private final EquipService service;
 
 
     @GetMapping("/server")

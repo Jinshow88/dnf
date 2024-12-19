@@ -5,7 +5,7 @@ import com.game.dnf.dto.request.opendata.*;
 import com.game.dnf.dto.response.*;
 import org.springframework.http.ResponseEntity;
 
-public interface OpenDataServerIdService {
+public interface EquipService {
     ResponseEntity<? super ServerIdResponseDto> serverId(ServerIdRequestDto dto);
 
     ResponseEntity<? super SearchResponseDto> search(SearchRequestDto dto);

@@ -15,7 +15,7 @@ import com.game.dnf.exception.UserErrorCode;
 import com.game.dnf.repository.BasicInfoRepository;
 import com.game.dnf.repository.SearchRepository;
 import com.game.dnf.repository.ServerIdRepository;
-import com.game.dnf.service.OpenDataServerIdService;
+import com.game.dnf.service.EquipService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -29,7 +29,7 @@ import java.util.List;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class OpenDataServerIdServiceImpl implements OpenDataServerIdService {
+public class EquipServiceImpl implements EquipService {
     // API URL과 API 키는 환경 변수로 관리
     private final String API_URL = "https://api.neople.co.kr/df/servers";
     private final String API_KEY = "Q08kMP1vfysTkL6kPjK4W5Z8ZQtKMI3K";
