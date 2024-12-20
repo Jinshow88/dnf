@@ -5,11 +5,9 @@ public class SearchSwaggerDescription {
     public static final String SEARCH_DESCRIPTION =
 
             "<strong>캐릭터를 검색 합니다.</strong>" +
-                    "<p>로그인이 필요한 기능입니다. 상단 Authorize 에 토큰값을 입력 후 이용해주세요.</p>" +
-                    "<p>-------------------------------------------------</p>" +
-                    "<p>01. reservationBeforeResultSetList : 예약중인 글램핑 리스트를 불러옵니다.</p>" +
-                    "<p>02. reservationCompleteResultSetList : 이용완료된 글램핑 리스트를 불러옵니다.</p>" +
-                    "<p>03. reservationCancelResultSetList : 예약취소한 글램핑 리스트를 불러옵니다.</p>"
+                    "<p>-------------------------------------------------------------------</p>" +
+                    "<p>01. characterName : 캐릭터 닉네임 입력</p>" +
+                    "<p>02. serverName : 서버 입력</p>"
             ;
 
     public static final String SEARCH_RESPONSE_ERROR_CODE =
