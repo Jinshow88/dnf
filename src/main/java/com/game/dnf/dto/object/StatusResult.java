@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class StatusDto {
+public class StatusResult {
     String serverId;
     String characterId;
     String characterName;
@@ -18,7 +18,7 @@ public class StatusDto {
     String jobGrowName;
     String fame;
 
-    public StatusDto() {
+    public StatusResult() {
 
     }
 }

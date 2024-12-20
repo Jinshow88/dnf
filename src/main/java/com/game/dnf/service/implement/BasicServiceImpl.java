@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.game.dnf.dto.object.SearchResult;
 import com.game.dnf.dto.object.basic.ServerDto;
-import com.game.dnf.dto.object.StatusDto;
+import com.game.dnf.dto.object.StatusResult;
 import com.game.dnf.dto.request.basic.BasicRequestDto;
 import com.game.dnf.dto.request.basic.SearchRequestDto;
 import com.game.dnf.dto.request.basic.ServerIdRequestDto;
@@ -244,7 +244,7 @@ public class BasicServiceImpl implements BasicService {
         } catch (Exception e) {
             log.error("데이터 저장 중 오류 발생", e);
         }
-        StatusDto result = new StatusDto();
+        StatusResult result = new StatusResult();
         result.setServerId(result.getServerId());
         result.setCharacterId(result.getCharacterId());
         result.setLevel(result.getLevel());

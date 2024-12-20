@@ -1,7 +1,7 @@
 package com.game.dnf.dto.response.basic;
 
 import com.game.dnf.dto.ResponseDto;
-import com.game.dnf.dto.object.StatusDto;
+import com.game.dnf.dto.object.StatusResult;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -30,23 +30,23 @@ import static com.game.dnf.common.GlobalConst.SUCCESS_MESSAGE;
         String fame;
 
 
-        private StatusResponseDto(StatusDto statusDto) {
+        private StatusResponseDto(StatusResult statusResult) {
             super(SUCCESS_CODE, SUCCESS_MESSAGE);
-            this.serverId = statusDto.getServerId();
-            this.characterId = statusDto.getCharacterId();
-            this.characterName = statusDto.getCharacterName();
-            this.level = statusDto.getLevel();
-            this.jobId = statusDto.getJobId();
-            this.jobGrowId = statusDto.getJobGrowId();
-            this.jobName = statusDto.getJobName();
-            this.jobGrowName = statusDto.getJobGrowName();
-            this.fame = statusDto.getFame();
+            this.serverId = statusResult.getServerId();
+            this.characterId = statusResult.getCharacterId();
+            this.characterName = statusResult.getCharacterName();
+            this.level = statusResult.getLevel();
+            this.jobId = statusResult.getJobId();
+            this.jobGrowId = statusResult.getJobGrowId();
+            this.jobName = statusResult.getJobName();
+            this.jobGrowName = statusResult.getJobGrowName();
+            this.fame = statusResult.getFame();
 
 
         }
 
-        public static ResponseEntity<ResponseDto> success(StatusDto statusDto) {
-            StatusResponseDto result = new StatusResponseDto(statusDto);
+        public static ResponseEntity<ResponseDto> success(StatusResult statusResult) {
+            StatusResponseDto result = new StatusResponseDto(statusResult);
             return ResponseEntity.status(HttpStatus.OK).body(result);
         }
 }
