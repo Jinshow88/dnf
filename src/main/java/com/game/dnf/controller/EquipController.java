@@ -61,43 +61,6 @@ import static com.game.dnf.common.swagger.equip.TalismanSwaggerDescription.TALIS
 public class EquipController {
     private final EquipService service;
 
-
-    @GetMapping("/server")
-    @Operation(summary = "서버 불러오기", description = SERVER_ID_DESCRIPTION)
-    @ApiResponse(responseCode = "200", description = SERVER_ID_RESPONSE_ERROR_CODE,
-            content = @Content(
-                    mediaType = "application/json", schema = @Schema(implementation = ServerIdResponseDto.class)))
-    public ResponseEntity<?super ServerIdResponseDto> getServerId(@ParameterObject @ModelAttribute ServerIdRequestDto dto) {
-        return service.serverId(dto);
-    }
-
-    @GetMapping("/search")
-    @Operation(summary = "캐릭터 검색하기", description = SEARCH_DESCRIPTION)
-    @ApiResponse(responseCode = "200", description = SEARCH_RESPONSE_ERROR_CODE,
-            content = @Content(
-                    mediaType = "application/json", schema = @Schema(implementation = SearchResponseDto.class)))
-    public ResponseEntity<?super SearchResponseDto> getSearch(@ParameterObject @ModelAttribute SearchRequestDto dto) {
-        return service.search(dto);
-    }
-
-    @GetMapping("/basic")
-    @Operation(summary = "기본정보", description = BASIC_DESCRIPTION)
-    @ApiResponse(responseCode = "200", description = BASIC_RESPONSE_ERROR_CODE,
-            content = @Content(
-                    mediaType = "application/json", schema = @Schema(implementation = BasicResponseDto.class)))
-    public ResponseEntity<?super BasicResponseDto> getBasic(@ParameterObject @ModelAttribute BasicRequestDto dto) {
-        return service.basic(dto);
-    }
-
-    @GetMapping("/status")
-    @Operation(summary = "능력치 정보", description = STATUS_DESCRIPTION)
-    @ApiResponse(responseCode = "200", description = STATUS_RESPONSE_ERROR_CODE,
-            content = @Content(
-                    mediaType = "application/json", schema = @Schema(implementation = StatusResponseDto.class)))
-    public ResponseEntity<?super StatusResponseDto> getsStatus(@ParameterObject @ModelAttribute StatusRequestDto dto) {
-        return service.status(dto);
-    }
-
     @GetMapping("/equipment")
     @Operation(summary = "장비", description = EQUIP_DESCRIPTION)
     @ApiResponse(responseCode = "200", description = EQUIP_RESPONSE_ERROR_CODE,
@@ -152,32 +115,6 @@ public class EquipController {
         return service.equipmentTrait(dto);
     }
 
-    @GetMapping("/buffEquipment")
-    @Operation(summary = "버프 장비", description = BUFF_EQUIP_DESCRIPTION)
-    @ApiResponse(responseCode = "200", description = BUFF_EQUIP_RESPONSE_ERROR_CODE,
-            content = @Content(
-                    mediaType = "application/json", schema = @Schema(implementation = BuffEquipmentResponseDto.class)))
-    public ResponseEntity<?super BuffEquipmentResponseDto> getBuffEquipment(@ParameterObject @ModelAttribute BuffEquipmentRequestDto dto) {
-        return service.buffEquipment(dto);
-    }
-
-    @GetMapping("/buffAvatar")
-    @Operation(summary = "버프 아바타", description = BUFF_AVATAR_DESCRIPTION)
-    @ApiResponse(responseCode = "200", description = BUFF_AVATAR_RESPONSE_ERROR_CODE,
-            content = @Content(
-                    mediaType = "application/json", schema = @Schema(implementation = BuffAvatarResponseDto.class)))
-    public ResponseEntity<?super BuffAvatarResponseDto> getBuffAvatar(@ParameterObject @ModelAttribute BuffAvatarRequestDto dto) {
-        return service.buffAvatar(dto);
-    }
-
-    @GetMapping("/buffCreature")
-    @Operation(summary = "버프크리쳐", description = BUFF_AVATAR_DESCRIPTION)
-    @ApiResponse(responseCode = "200", description = BUFF_AVATAR_RESPONSE_ERROR_CODE,
-            content = @Content(
-                    mediaType = "application/json", schema = @Schema(implementation = BuffCreatureResponseDto.class)))
-    public ResponseEntity<?super BuffCreatureResponseDto> getBuffCreature(@ParameterObject @ModelAttribute BuffCreatureRequestDto dto) {
-        return service.buffCreature(dto);
-    }
 }
 
 

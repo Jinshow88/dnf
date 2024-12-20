@@ -20,13 +20,6 @@ import com.game.dnf.dto.response.equip.*;
 import org.springframework.http.ResponseEntity;
 
 public interface EquipService {
-    ResponseEntity<? super ServerIdResponseDto> serverId(ServerIdRequestDto dto);
-
-    ResponseEntity<? super SearchResponseDto> search(SearchRequestDto dto);
-
-    ResponseEntity<? super BasicResponseDto> basic(BasicRequestDto dto);
-
-    ResponseEntity<? super StatusResponseDto> status(StatusRequestDto dto);
 
     ResponseEntity<? super EquipmentResponseDto> equipment(EquipmentRequestDto dto);
 
@@ -40,9 +33,4 @@ public interface EquipService {
 
     ResponseEntity<? super EquipmentTraitResponseDto> equipmentTrait(EquipmentTraitRequestDto dto);
 
-    ResponseEntity<? super BuffEquipmentResponseDto> buffEquipment(BuffEquipmentRequestDto dto);
-
-    ResponseEntity<? super BuffAvatarResponseDto> buffAvatar(BuffAvatarRequestDto dto);
-
-    ResponseEntity<? super BuffCreatureResponseDto> buffCreature(BuffCreatureRequestDto dto);
 }
