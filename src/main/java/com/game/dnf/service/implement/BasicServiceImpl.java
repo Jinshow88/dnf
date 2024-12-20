@@ -3,7 +3,7 @@ package com.game.dnf.service.implement;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.game.dnf.dto.object.SearchResult;
-import com.game.dnf.dto.object.ServerDto;
+import com.game.dnf.dto.object.basic.ServerDto;
 import com.game.dnf.dto.object.StatusDto;
 import com.game.dnf.dto.request.basic.BasicRequestDto;
 import com.game.dnf.dto.request.basic.SearchRequestDto;

@@ -1,7 +1,7 @@
 package com.game.dnf.dto.response.basic;
 
 import com.game.dnf.dto.ResponseDto;
-import com.game.dnf.dto.object.ServerDto;
+import com.game.dnf.dto.object.basic.ServerDto;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
